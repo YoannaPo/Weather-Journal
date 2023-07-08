@@ -4,18 +4,61 @@ body{
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
+/* body {
+    background: linear-gradient(168deg, #af2222, #9bcb59);
+    background-size: auto;
+    background-size: 400% 400%;
+    animation: AnimationName 30s ease infinite;
+    margin: 0;
+    font-family: "Merriweather", serif;
+    color: #fff;
+  }
+
+  @keyframes AnimationName {
+    0% {
+        background-position: 94% 0%;
+    }
+    50% {
+        background-position: 7% 100%;
+    }
+    100% {
+        background-position: 94% 0%;
+    }
+} */
+
 #app{
     display: grid;
     grid-auto-rows: minmax(150px, auto);
     /* grid-template-columns:  */
     height:100vh;
-    background: #f23557;
-    color: #f0d43a;
+    /* background: #f23557;
+    color: #f0d43a; */
+    background: linear-gradient(168deg, #af2222, #9bcb59);
+    background-size: auto;
+    background-size: 400% 400%;
+    animation: SmoothColourAnimation 30s ease infinite;
+    margin: 0;
+    
+    font-family: 'Oswald', sans-serif;
+    color: #fff;
+
     justify-content: center;
     grid-gap: 1em;
-    font-size: 20px;
-    font-family: 'Oswald', sans-serif;
+    font-size: 20px;  
 }
+
+@keyframes SmoothColourAnimation {
+    0% {
+        background-position: 94% 0%;
+    }
+    50% {
+        background-position: 7% 100%;
+    }
+    100% {
+        background-position: 94% 0%;
+    }
+}
+
 
 .holder{
 
