@@ -53,6 +53,7 @@ body{
 }
 
 #entryHolder{
+    margin-left: 5px;
 
 }
 
@@ -86,14 +87,15 @@ input{
     height: 60px;
     width: 320px;
     background:#22b2da;
-    color: #f0d43a;
+    color: rgba(30, 61, 147, 0.839);
+    /*color: #f0d43a;*/
     font-size: 20px;
     font-family: 'Oswald', sans-serif;
     border-radius: 5px 20px 5px;
 }
 
 button{
-    width: 400px;
+    width: 300px;
     height: 100px;
     background: #3b4a6b;
     color: #f0d43a;
@@ -109,7 +111,7 @@ h1{
 
 textarea{
     background:#22b2da;
-    color: #f0d43a;
+    color: rgba(30, 61, 147, 0.839);
     font-size: 20px;
     font-family: 'Oswald', sans-serif;
     border-radius: 5px 20px 5px;
