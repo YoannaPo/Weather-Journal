@@ -4,36 +4,18 @@ body{
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
-/* body {
-    background: linear-gradient(168deg, #af2222, #9bcb59);
-    background-size: auto;
-    background-size: 400% 400%;
-    animation: AnimationName 30s ease infinite;
-    margin: 0;
-    font-family: "Merriweather", serif;
-    color: #fff;
-  }
-
-  @keyframes AnimationName {
-    0% {
-        background-position: 94% 0%;
-    }
-    50% {
-        background-position: 7% 100%;
-    }
-    100% {
-        background-position: 94% 0%;
-    }
-} */
 
 #app{
     display: grid;
-    grid-auto-rows: minmax(150px, auto);
+    grid-auto-rows: minmax(100px, auto);
     /* grid-template-columns:  */
     height:100vh;
     /* background: #f23557;
     color: #f0d43a; */
-    background: linear-gradient(168deg, #af2222, #9bcb59);
+
+    /*Smooth colour changing transitions*/
+    background: linear-gradient(168deg, #20ada3, #cb59b0);
+    /* #af2222, #9bcb59  */
     background-size: auto;
     background-size: 400% 400%;
     animation: SmoothColourAnimation 30s ease infinite;
@@ -66,6 +48,8 @@ body{
 
 .entry{
     background: rgba(59, 74, 107, .4);
+    border-radius: 5px 20px 5px;
+    
 }
 
 #entryHolder{
@@ -105,7 +89,7 @@ input{
     color: #f0d43a;
     font-size: 20px;
     font-family: 'Oswald', sans-serif;
-    border: none;
+    border-radius: 5px 20px 5px;
 }
 
 button{
@@ -115,7 +99,8 @@ button{
     color: #f0d43a;
     font-size: 26px;
     font-family: 'Oswald', sans-serif;
-    border: none;
+    border: none; 
+    border-radius: 20px;
     box-shadow: 2px 4px 5px #444;
 }
 h1{
@@ -127,6 +112,7 @@ textarea{
     color: #f0d43a;
     font-size: 20px;
     font-family: 'Oswald', sans-serif;
+    border-radius: 5px 20px 5px;
 }
 /* Reset style for HTML element on active to have no border*/
 input:focus,
