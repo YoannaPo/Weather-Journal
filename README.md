@@ -19,12 +19,30 @@ node -v
 ```
 
 If you don't have Node.js installed, please follow the link with the instructions: 
-[How to install Node.js]https://nodejs.dev/en/learn/how-to-install-nodejs/
+[How to install Node.js](https://nodejs.dev/en/learn/how-to-install-nodejs/)
+
+Then open the terminal. Once again navigate to project directory and run these commands:
+```bash
+  npm install body-parser
+  npm install cors
+  npm install express
+```
+or this use this one line command to install multiple npm packages
+```bash
+  npm install body-parser cors express
+```
+
+When everything is ready, start the server by running this command:
+```bash
+  node server.js
+```
+You can register and generate API  key through [https://openweathermap.org/](OpenWeather) website and update the API key on app.js file.
+You get access the application through [http://localhost:8000](http://localhost:8000)
 
 ## Room for Improvement
 [(Back to top)](#table-of-contents)
 * secure API key 
-Please note that this app aims to learn how the API and client/server scripts work together. Because of the purpose of learning - the API key might be exposed on the client side. That's not recommended to do in a production environment.
+<br>Please note that this app aims to learn how the API and client/server scripts work together. Because of the purpose of learning - the API key might be exposed on the client side. That's not recommended to do in a production environment.
 More about recommended best practices:
 https://developers.google.com/maps/api-security-best-practices
 
