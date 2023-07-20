@@ -13,7 +13,7 @@
 
 
 ## Installation 
-This app runs on a Node.js environment, so ensure you have a Node installed on your machine. To do this, you can open the terminal, navigate to the project directory and run the command (by doing this, you will be able to check which version you have if so):
+This app runs on a Node.js environment, so ensure you have a Node installed on your machine. <br>To do this, you can open the terminal, navigate to the project directory and run the command (by doing this, you will be able to check which version you have if so):
 ```bash
 node -v
 ```
@@ -27,7 +27,7 @@ Then open the terminal. Once again navigate to project directory and run these c
   npm install cors
   npm install express
 ```
-or this use this one line command to install multiple npm packages
+or use this one line command to install multiple npm packages
 ```bash
   npm install body-parser cors express
 ```
@@ -37,7 +37,7 @@ When everything is ready, start the server by running this command:
   node server.js
 ```
 You can register and generate API  key through [https://openweathermap.org/](OpenWeather) website and update the API key on app.js file.
-You get access the application through [http://localhost:8000](http://localhost:8000)
+<br>You get access the application through [http://localhost:8000](http://localhost:8000)
 
 ## Room for Improvement
 [(Back to top)](#table-of-contents)
