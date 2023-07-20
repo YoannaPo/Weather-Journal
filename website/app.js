@@ -1,6 +1,6 @@
 
 /* Global Variables */
-const apiKey= 'b05808d2929a97e407ea15bd19341f79&units=imperial';
+const apiKey= '0e210c2325a6fe90f9e47d2a6b98c8c1&units=imperial';
 //built in  API request by ZIP code - API call below
 const basicUrl = (zipCode)  => {
     return `https://api.openweathermap.org/data/2.5/weather?zip=${zipCode}&appid=${apiKey}`
@@ -18,12 +18,13 @@ document.getElementById('generate').addEventListener('click', startThisEvent);
 function startThisEvent(e){
     const usersFeelings = document.getElementById('feelings').value;
     const zipsLocations = document.getElementById('zip').value;
+
 //Add function which gets  zip weather from API
-
-    // .then(function(data){
-    //     postData('/add', {usersResponse: usersFeeling})
-
-    // }
+    getZipWeatherFromApi(basicUrl(zipsLocations))
+    .then(function(data){
+        postData('/add', {date: newDate, temp: data.main.temp, userResponse: usersFeelings} )
+     })
+     .then(dynamicUpdateUI)
 }
 
 //POST for user input data
@@ -52,7 +53,7 @@ const getZipWeatherFromApi = async (url) =>{
     const res = await fetch(url);
     try {
         const weatherApiData = await res.json();
-        console.log(weatherApiData.main.temp);
+        //console.log(weatherApiData.main.temp);
         return weatherApiData;
         
     } catch (error) {
@@ -68,9 +69,9 @@ const dynamicUpdateUI = async () =>{
     const allData = await request.json()
     console.log(allData)
     //Updated data to DOM elements
-    document.getElementById('temp').innerHTML = Math.round(allData.temp)+ 'degrees';
-    document.getElementById('content').innerHTML = allData.userResponse;
-    document.getElementById("date").innerHTML =allData.date;
+    document.getElementById('temp').innerText = Math.round(allData.temp)+ ' degrees';
+    document.getElementById('content').innerText = allData.userResponse;
+    document.getElementById("date").innerText =allData.date;
     }
     catch(error) {
       console.log("error", error);
