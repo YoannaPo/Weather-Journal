@@ -28,4 +28,36 @@ app.use(express.static('website'));
 
 // Setup Server
 //set variable 
+const port = 8000;
+
+//this code would you add above the callback function to successfully initiate a server named server
+const server = app.listen(port, listening);
+
+//listening function - callback to debug
+function listening(){
+    console.log('server running');
+
+    //template string
+    console.log(`running on localhost: ${port}`);
+}   
+
+//GET - add a GET route - this should return the propjectData (object in your server code)
+app.get('/all', getWeatherInfo);
+
+function getWeatherInfo(req, res){
+    res.json(projectData);
+}
+//POST - add a POST route - this should add incoming data to projectData
+app.post('/add', addUsersInfo);
+
+function addUsersInfo (req, res){
+    projectData = {
+        date: req.body.date,
+        temp: req.body.temp,
+        userResponse: req.body.userResponse
+    }
+    res.send(projectData);
+    console.log(projectData);
+}
+
 
